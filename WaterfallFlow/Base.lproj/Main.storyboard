@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TrY-mM-Ze1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0ek-xQ-Kht">
+            <objects>
+                <navigationController id="TrY-mM-Ze1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HLB-A2-wsP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="65e-in-82A" kind="relationship" relationship="rootViewController" id="fJi-om-rr6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbE-RQ-XNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-912" y="153"/>
+        </scene>
+        <!--瀑布流式布局-->
+        <scene sceneID="cph-3c-xhR">
+            <objects>
+                <collectionViewController id="65e-in-82A" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KAc-Qs-eu4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Xk-MJ-Pts" customClass="DWaterfallFlowLayout">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yaS-1a-Tkh" customClass="DWaterfallFlowCell">
+                                <rect key="frame" x="0.0" y="64" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EKg-dk-DX4">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFh-o1-3DZ">
+                                            <rect key="frame" x="0.0" y="175" width="150" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gt-r6-Npj">
+                                                    <rect key="frame" x="56.5" y="2" width="37.5" height="21"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="yY2-qC-Wyf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="RVl-ZG-5yd"/>
+                                                <constraint firstItem="6Gt-r6-Npj" firstAttribute="centerY" secondItem="SFh-o1-3DZ" secondAttribute="centerY" id="VN6-I8-0Y5"/>
+                                                <constraint firstItem="6Gt-r6-Npj" firstAttribute="centerX" secondItem="SFh-o1-3DZ" secondAttribute="centerX" id="vNm-zJ-xba"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="EKg-dk-DX4" firstAttribute="top" secondItem="yaS-1a-Tkh" secondAttribute="top" id="Bwx-4K-v7j"/>
+                                    <constraint firstAttribute="trailing" secondItem="SFh-o1-3DZ" secondAttribute="trailing" id="Mjr-1K-oGp"/>
+                                    <constraint firstItem="SFh-o1-3DZ" firstAttribute="leading" secondItem="yaS-1a-Tkh" secondAttribute="leading" id="aHg-Ut-TyM"/>
+                                    <constraint firstAttribute="trailing" secondItem="EKg-dk-DX4" secondAttribute="trailing" id="aW7-l7-k7v"/>
+                                    <constraint firstAttribute="bottom" secondItem="SFh-o1-3DZ" secondAttribute="bottom" id="axQ-o8-f7h"/>
+                                    <constraint firstAttribute="bottom" secondItem="EKg-dk-DX4" secondAttribute="bottom" id="r9C-SC-YjT"/>
+                                    <constraint firstItem="EKg-dk-DX4" firstAttribute="leading" secondItem="yaS-1a-Tkh" secondAttribute="leading" id="rLA-jX-eN2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="EKg-dk-DX4" id="epo-Kv-J2x"/>
+                                    <outlet property="titleLabel" destination="6Gt-r6-Npj" id="HAv-Fn-4UZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="tcc-P7-21v" customClass="DWaterfallFlowFooterView">
+                            <rect key="frame" x="0.0" y="264" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TuH-fB-Q4u">
+                                    <rect key="frame" x="285" y="10" width="30" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="hVg-ZM-cTF"/>
+                                        <constraint firstAttribute="width" constant="30" id="mUQ-A9-25Y"/>
+                                    </constraints>
+                                </activityIndicatorView>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="TuH-fB-Q4u" firstAttribute="centerX" secondItem="tcc-P7-21v" secondAttribute="centerX" id="KhN-kP-iJ4"/>
+                                <constraint firstItem="TuH-fB-Q4u" firstAttribute="centerY" secondItem="tcc-P7-21v" secondAttribute="centerY" id="ezd-tL-DS9"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="activityIndicator" destination="TuH-fB-Q4u" id="bSj-9N-2ug"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="65e-in-82A" id="ca7-IT-eqL"/>
+                            <outlet property="delegate" destination="65e-in-82A" id="c32-To-ews"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="瀑布流式布局" id="r6N-CI-YHP"/>
+                    <connections>
+                        <outlet property="waterfallFlowLayout" destination="0Xk-MJ-Pts" id="0gz-Ge-sHN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZe-g2-a93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="172"/>
+        </scene>
+    </scenes>
+</document>
