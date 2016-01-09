@@ -1,7 +1,8 @@
 # waterfallFlow
 waterfallFlow layout
 
-参照git源码 https://github.com/lengmolehongyan/WaterfallFlowDemo.git
+参照源码    https://github.com/lengmolehongyan/WaterfallFlowDemo.git
+
 以及blog   http://www.cnblogs.com/purple-sweet-pottoes/p/4833558.html
 
 进行略微的修正 对源码进行了 数据解耦
