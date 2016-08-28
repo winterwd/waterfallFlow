@@ -36,6 +36,7 @@
 		0F6AB8161C3D56110047B28F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6AB8141C3D56110047B28F /* LaunchScreen.storyboard */; };
 		0F6AB8211C3D56120047B28F /* WaterfallFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6AB8201C3D56120047B28F /* WaterfallFlowTests.m */; };
 		0F6AB82C1C3D56120047B28F /* WaterfallFlowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6AB82B1C3D56120047B28F /* WaterfallFlowUITests.m */; };
+		C86424B31D72BE3D0049B0AB /* WPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C86424B21D72BE3D0049B0AB /* WPhotoBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		0F6AB8271C3D56120047B28F /* WaterfallFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterfallFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6AB82B1C3D56120047B28F /* WaterfallFlowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterfallFlowUITests.m; sourceTree = "<group>"; };
 		0F6AB82D1C3D56120047B28F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86424B11D72BE3D0049B0AB /* WPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPhotoBrowser.h; sourceTree = "<group>"; };
+		C86424B21D72BE3D0049B0AB /* WPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPhotoBrowser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,7 @@
 		0F3F66F21C3D59B8002C2C3C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C86424B01D72BC4A0049B0AB /* PhotoBrowser */,
 				0F3F66F31C3D59B8002C2C3C /* controller */,
 				0F3F67171C3D59B8002C2C3C /* view */,
 				0F3F66F61C3D59B8002C2C3C /* model */,
@@ -297,6 +301,15 @@
 			path = WaterfallFlowUITests;
 			sourceTree = "<group>";
 		};
+		C86424B01D72BC4A0049B0AB /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				C86424B11D72BE3D0049B0AB /* WPhotoBrowser.h */,
+				C86424B21D72BE3D0049B0AB /* WPhotoBrowser.m */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,7 +372,7 @@
 		0F6AB7FB1C3D56110047B28F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = D;
+				CLASSPREFIX = W;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = d;
 				TargetAttributes = {
@@ -450,6 +463,7 @@
 				0F3F671F1C3D59B8002C2C3C /* SDWebImageManager.m in Sources */,
 				0F3F67231C3D59B8002C2C3C /* UIImage+MultiFormat.m in Sources */,
 				0F3F67201C3D59B8002C2C3C /* SDWebImagePrefetcher.m in Sources */,
+				C86424B31D72BE3D0049B0AB /* WPhotoBrowser.m in Sources */,
 				0F153E9E1C3EB20F00BA8105 /* DGoodsModel.m in Sources */,
 				0F153E9B1C3EB0D100BA8105 /* DWaterfallFlowCell.m in Sources */,
 				0F6AB8081C3D56110047B28F /* main.m in Sources */,

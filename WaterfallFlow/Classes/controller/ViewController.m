@@ -11,7 +11,9 @@
 #import "DWaterfallFlowFooterView.h"
 #import "DWaterfallFlowLayout.h"
 
-@interface ViewController ()<DWaterfallFlowLayoutDelegate>
+#import "WPhotoBrowser.h"
+
+@interface ViewController ()<DWaterfallFlowLayoutDelegate, WPhotoBrowserDelegate>
 
 @property (weak, nonatomic) IBOutlet DWaterfallFlowLayout *waterfallFlowLayout;
 @property (nonatomic, strong) DWaterfallFlowFooterView *footerView;
@@ -81,6 +83,23 @@ static NSInteger dataIndex = 0;
         return self.footerView;
     }
     return nil;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    WPhotoBrowser *photoBrowser = [[WPhotoBrowser alloc] initWithCurrentImageIndex:indexPath.item imageTotalCount:self.dataArray.count];
+    photoBrowser.delegate = self;
+    
+    [photoBrowser showAtView:[collectionView cellForItemAtIndexPath:indexPath]];
+}
+
+#pragma mark - WPhotoBrowserDelegate
+
+- (NSURL *)photoBrowser:(WPhotoBrowser *)photoBrowser heightQualityImageAtIndex:(NSInteger)index
+{
+    DGoodsModel *model = self.dataArray[index];
+    NSURL *URL = [NSURL URLWithString:model.img];
+    return URL;
 }
 
 #pragma mark - scrollview delegate

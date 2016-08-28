@@ -20,7 +20,7 @@
 // 获取 fake data
 + (NSArray *)loadDataWithDataIndex:(NSInteger)index
 {
-    NSString *dataName = [NSString stringWithFormat:@"data_%d.plist",index % 3 + 1];
+    NSString *dataName = [NSString stringWithFormat:@"data_%ld.plist",index % 3 + 1];
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:dataName ofType:nil];
     
     NSArray *dataArray = [NSArray arrayWithContentsOfFile:dataPath];
